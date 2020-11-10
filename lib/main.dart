@@ -43,6 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("フラッターデモホームページ"),
+        actions: [
+          Icon(Icons.adb_outlined),
+        ],
       ),
       body: Center(
         child: Column(
