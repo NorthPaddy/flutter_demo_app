@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-
   final String title;
 
   @override
@@ -47,24 +46,26 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(Icons.adb_outlined),
         ],
       ),
-      body: Container(
-        color: Colors.green[200],
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'ボタンを押した回数は  ',
-              ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              Text(
-                '  回',
-              ),
-            ],
-          ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'ボタンを押した回数は  ',
+                ),
+                Text(
+                  '$_counter',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+                Text(
+                  '  回',
+                ),
+              ],
+            )
+          ]
         ),
       ),
       floatingActionButton: FloatingActionButton(
