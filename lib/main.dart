@@ -47,40 +47,38 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'ボタンを押した回数は  ',
-                ),
-                Text(
-                  '$_counter',
-                  style: Theme.of(context).textTheme.headline4,
-                ),
-                Text(
-                  '  回',
-                ),
-              ],
-            ),
-             RaisedButton(
-              child: Text('ボタン'),
-              color: Colors.blue,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'ボタンを押した回数は  ',
               ),
-              onPressed: _incrementCounter,
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              Text(
+                '  回',
+              ),
+            ],
+          ),
+          RaisedButton(
+            child: Text('ボタン'),
+            color: Colors.blue,
+            textColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
-          ]
-        ),
+            onPressed: _incrementCounter,
+          ),
+        ]),
       ),
       floatingActionButton: FloatingActionButton(
-        // onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: Icon(Icons.arrow_forward),
+        onPressed: () {
+          // tooltip: 'Increment',
+        },
       ),
     );
   }
