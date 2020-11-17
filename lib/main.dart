@@ -64,12 +64,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   '  回',
                 ),
               ],
-            )
+            ),
+             RaisedButton(
+              child: Text('ボタン'),
+              color: Colors.blue,
+              textColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              onPressed: _incrementCounter,
+            ),
           ]
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        // onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
