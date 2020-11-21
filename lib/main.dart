@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'next_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -77,7 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward),
         onPressed: () {
-          // tooltip: 'Increment',
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NextPage()),
+          );
         },
       ),
     );
