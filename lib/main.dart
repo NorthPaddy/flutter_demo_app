@@ -53,9 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.network(
-                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
-                ),
+                // Image.network(
+                //   'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                // ),
+                Image.asset('images/owl.jpg'),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
