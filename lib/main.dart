@@ -56,7 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 // Image.network(
                 //   'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
                 // ),
-                Image.asset('images/owl.jpg'),
+                Image.asset('images/owl.jpg',
+                  height: 250,
+                  width: 250,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
