@@ -48,33 +48,40 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(Icons.adb_outlined),
         ],
       ),
-      body: Center(
-        child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'ボタンを押した回数は  ',
-              ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              Text(
-                '  回',
-              ),
-            ],
-          ),
-          RaisedButton(
-            child: Text('ボタン'),
-            color: Colors.blue,
-            textColor: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+      body: Container(
+        child: Center(
+          child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.network(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'ボタンを押した回数は  ',
+                    ),
+                    Text(
+                      '$_counter',
+                      style: Theme.of(context).textTheme.headline4,
+                    ),
+                    Text(
+                      '  回',
+                    ),
+              ],
             ),
-            onPressed: _incrementCounter,
-          ),
-        ]),
+            RaisedButton(
+              child: Text('ボタン'),
+              color: Colors.blue,
+              textColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              onPressed: _incrementCounter,
+            ),
+          ]),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward),
