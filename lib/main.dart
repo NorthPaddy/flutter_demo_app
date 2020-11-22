@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   text: TextSpan(
                     style: TextStyle(color: Colors.black),
                     children: <TextSpan>[
-                      TextSpan(text: 'ボタンを押した回数は '),
+                      TextSpan(text: 'いいね！した回数は '),
                       TextSpan(
                           text: '$_counter',
                           style: Theme.of(context).textTheme.headline4),
@@ -98,8 +98,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                 ),
-                RaisedButton(
-                  child: Text('ボタン'),
+                RaisedButton.icon(
+                  icon: Icon(
+                    Icons.sentiment_satisfied_alt_outlined,
+                    color: Colors.white,
+                  ),
+                  label: Text('いいね！'),
                   color: Colors.blue,
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(
