@@ -41,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   bool favorite;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,49 +52,49 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Container(
         child: Center(
-          child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // Image.network(
-                //   'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
-                // ),
-                Image.asset('images/owl.jpg',
-                  height: 250,
-                  width: 250,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    RichText(
-                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
-                      text: TextSpan(
-                        style: TextStyle(color: Colors.black),
-                        children: <TextSpan>[
-                          TextSpan(text: 'ボタンを押した回数は '),
-                          TextSpan(text: '$_counter',
-                              style: Theme.of(context).textTheme.headline4),
-                          TextSpan(text: ' 回'),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                  FlatButton(
-                    child: Icon(
-                    favorite == true ? Icons.favorite : Icons.favorite_border,
-                      color: favorite == true ? Colors.red : Colors.black38,
-                    ),
-                    onPressed: () {
-                      setState(() {
-                        if (favorite != true) {
-                          //ハートが押されたときにfavoriteにtrueを代入している
-                          favorite = true;
-                        } else {
-                          favorite = false;
-                        }
-                      });
-                    },
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            // Image.network(
+            //   'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+            // ),
+            Image.asset(
+              'images/owl.jpg',
+              height: 250,
+              width: 250,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RichText(
+                  textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                  text: TextSpan(
+                    style: TextStyle(color: Colors.black),
+                    children: <TextSpan>[
+                      TextSpan(text: 'ボタンを押した回数は '),
+                      TextSpan(
+                          text: '$_counter',
+                          style: Theme.of(context).textTheme.headline4),
+                      TextSpan(text: ' 回'),
+                    ],
                   ),
+                ),
+              ],
+            ),
+            FlatButton(
+              child: Icon(
+                favorite == true ? Icons.favorite : Icons.favorite_border,
+                color: favorite == true ? Colors.red : Colors.black38,
+              ),
+              onPressed: () {
+                setState(() {
+                  if (favorite != true) {
+                    //ハートが押されたときにfavoriteにtrueを代入している
+                    favorite = true;
+                  } else {
+                    favorite = false;
+                  }
+                });
+              },
+            ),
             RaisedButton(
               child: Text('ボタン'),
               color: Colors.blue,
