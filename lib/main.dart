@@ -63,15 +63,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(
-                      'ボタンを押した回数は  ',
-                    ),
-                    Text(
-                      '$_counter',
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                    Text(
-                      '  回',
+                    RichText(
+                      textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                      text: TextSpan(
+                        style: TextStyle(color: Colors.black),
+                        children: <TextSpan>[
+                          TextSpan(text: 'ボタンを押した回数は '),
+                          TextSpan(text: '$_counter',
+                              style: Theme.of(context).textTheme.headline4),
+                          TextSpan(text: ' 回'),
+                        ],
+                      ),
                     ),
               ],
             ),
