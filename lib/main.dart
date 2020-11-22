@@ -79,30 +79,35 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
-            FlatButton(
-              child: Icon(
-                favorite == true ? Icons.favorite : Icons.favorite_border,
-                color: favorite == true ? Colors.red : Colors.black38,
-              ),
-              onPressed: () {
-                setState(() {
-                  if (favorite != true) {
-                    //ハートが押されたときにfavoriteにtrueを代入している
-                    favorite = true;
-                  } else {
-                    favorite = false;
-                  }
-                });
-              },
-            ),
-            RaisedButton(
-              child: Text('ボタン'),
-              color: Colors.blue,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              onPressed: _incrementCounter,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FlatButton(
+                  child: Icon(
+                    favorite == true ? Icons.favorite : Icons.favorite_border,
+                    color: favorite == true ? Colors.red : Colors.black38,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      if (favorite != true) {
+                        //ハートが押されたときにfavoriteにtrueを代入している
+                        favorite = true;
+                      } else {
+                        favorite = false;
+                      }
+                    });
+                  },
+                ),
+                RaisedButton(
+                  child: Text('ボタン'),
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  onPressed: _incrementCounter,
+                ),
+              ],
             ),
           ]),
         ),
