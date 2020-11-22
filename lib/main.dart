@@ -39,6 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  bool favorite;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,8 +78,24 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                     ),
-              ],
-            ),
+                  ],
+                ),
+                  FlatButton(
+                    child: Icon(
+                    favorite == true ? Icons.favorite : Icons.favorite_border,
+                      color: favorite == true ? Colors.red : Colors.black38,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        if (favorite != true) {
+                          //ハートが押されたときにfavoriteにtrueを代入している
+                          favorite = true;
+                        } else {
+                          favorite = false;
+                        }
+                      });
+                    },
+                  ),
             RaisedButton(
               child: Text('ボタン'),
               color: Colors.blue,
