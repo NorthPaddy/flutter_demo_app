@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 FlatButton(
                   child: Icon(
                     favorite == true ? Icons.favorite : Icons.favorite_border,
-                    color: favorite == true ? Colors.red : Colors.black38,
+                    color: favorite == true ? Colors.red : Colors.grey,
                   ),
                   onPressed: () {
                     setState(() {
